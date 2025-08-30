@@ -2,11 +2,21 @@ name: Build fib-service
 
 on:
     push:
+        branches-ignore:
+            - 'main'
         paths:
-            - '**'
+            - 'src/**'
+            - 'tests/**'
+            - 'Dockerfile'
+            - 'Makefile'
+            - '.github/workflows/fib-service.build.yaml'
     pull_request:
         paths:
-            - '**'
+            - 'src/**'
+            - 'tests/**'
+            - 'Dockerfile'
+            - 'Makefile'
+            - '.github/workflows/fib-service.build.yaml'
 
 jobs:
     build-and-test:

@@ -1,8 +1,11 @@
 name: Deliver fib-service
 
 on:
-    release:
-        types: [published]
+    workflow_run:
+        workflows: ['Build fib-service']
+        types: [completed]
+        branches:
+            - 'main'
 
 jobs:
     build-and-push:
