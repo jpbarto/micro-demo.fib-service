@@ -6,6 +6,8 @@ docker run --rm -d \
 
 sleep 3
 
+curl 'http://localhost:8080/health'
+
 curl -s 'http://localhost:8080/fibonacci?number=78' | jq -c '.sequence' | grep -E '^\[0,1,1,2,3,5,8,13,21,34,55\]$'
 if [ $? -eq 0 ]; then 
 	echo "Test passed" 
