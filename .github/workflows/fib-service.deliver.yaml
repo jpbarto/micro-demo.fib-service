@@ -8,10 +8,6 @@ on:
 jobs:
     build-and-push:
         runs-on: ubuntu-latest
-        defaults:
-            run:
-                working-directory: fib-service
-
         permissions:
             contents: read
             packages: write
