@@ -1,9 +1,7 @@
 name: Deliver fib-service
 
 on:
-    workflow_run:
-        workflows: ['Build fib-service']
-        types: [completed]
+    push:
         branches:
             - 'main'
 
